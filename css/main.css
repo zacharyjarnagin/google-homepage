@@ -12,31 +12,44 @@ body {
 }
 
 form {
-  text-align: center;
+  /* This bit sets up the horizontal layout */
+  display:flex;
+  /* This bit draws the box around it */
+  border:1px solid grey;
+  border-radius: 50px;
+/* I've used padding so you can see the edges of the elements. */
+  padding:10px;
+  font-size: 17px;
+  width: 50%;
+  margin-left: 25%;
 }
+
 
 /* Style on the searchbar*/
-#search{
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  background: #f1f1f1;
+input[type=search_input]{
+  /* Tell the input to use all the available space */
+  flex-grow:2;
+/* And hide the input's outline, so the form looks like the outline */
+  border:none;
+}
+
+button {
+  width: 10%;
+  background-color: transparent;
+  border: none;
+}
+
+img.searchbutton {
   width: 40%;
+  float: right;
 }
 
-form.searchbar button {
-  width: 5%;
-  padding: 10px;
-  background: #2196F3;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none; /* Prevent double borders */
-  cursor: pointer;
+form:hover {
+   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-form.searchbar button:hover {
-  background: #0b7dda;
+form.searchbar {
+  padding-left:15px;
 }
 
 form.searchbar::after {
