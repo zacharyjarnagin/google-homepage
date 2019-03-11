@@ -86,7 +86,7 @@ form.searchbar::after {
 
 .top .active {
   background-color: #0000FF;
-  color: #C0C0C0;
+  color: white;
 }
 
 .bottom ul {
